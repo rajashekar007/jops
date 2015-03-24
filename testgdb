@@ -1,0 +1,13 @@
+{
+ "folders":
+ [
+ {
+ "path": "NONE OF YOUR BUSINESS WORDPRESS"
+ }
+ ],
+ "settings":
+ {
+ "sublimegdb_commandline": "gdb -nx -readnow -fullname --interpreter=mi -args ./a.out",
+ "sublimegdb_workingdir": "${folder:${project_path:bin/test1.exe}}"
+ }
+}

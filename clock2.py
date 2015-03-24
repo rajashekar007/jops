@@ -1,0 +1,25 @@
+s=raw_input()
+if s=='I':
+	print '1'
+elif s=='II':
+	print '2'
+elif s=='III':
+	print '3'
+elif s=='IV':
+	print '4'
+elif s=='V':
+	print '5'
+elif s=='VI':
+	print '6'
+elif s=='VII':
+	print '7'
+elif s=='VIII':
+	print '8'
+elif s=='IX':
+	print '9'
+elif s=='X':
+	print '10'
+elif s=='XI':
+	print '11'
+elif s=='XII':
+	print '12'

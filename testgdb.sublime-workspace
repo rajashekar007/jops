@@ -1,0 +1,2900 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"typ",
+				"typedef"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"up",
+				"update_seg"
+			],
+			[
+				"pr",
+				"printnp"
+			],
+			[
+				"gen",
+				"gen_primes"
+			],
+			[
+				"IN",
+				"INT_MIN"
+			],
+			[
+				"vecot",
+				"vector"
+			],
+			[
+				"dom",
+				"dominated"
+			],
+			[
+				"M",
+				"MAX"
+			],
+			[
+				"fl",
+				"flag"
+			],
+			[
+				"div",
+				"div_conq"
+			],
+			[
+				"be",
+				"begin"
+			],
+			[
+				"pu",
+				"push_back"
+			],
+			[
+				"N",
+				"NULL"
+			],
+			[
+				"bin",
+				"bintree"
+			],
+			[
+				"bi",
+				"bintree"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"prime",
+				"prime_size"
+			],
+			[
+				"primes",
+				"prime_size++]=i"
+			],
+			[
+				"pri",
+				"printheap"
+			],
+			[
+				"ip",
+				"inp"
+			],
+			[
+				"prin",
+				"printstring"
+			],
+			[
+				"p",
+				"print"
+			],
+			[
+				"li",
+				"lifetime1"
+			],
+			[
+				"permu",
+				"permuation_after_reduction"
+			],
+			[
+				"e",
+				"message_expansion"
+			],
+			[
+				"ini",
+				"initial_key_permutaion"
+			],
+			[
+				"tex",
+				"text_key"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "vpl2bc.cpp",
+			"settings":
+			{
+				"buffer_size": 1574,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sub_prob.cpp",
+			"settings":
+			{
+				"buffer_size": 2352,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "que1.cpp",
+			"settings":
+			{
+				"buffer_size": 918,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rangesum.cpp",
+			"settings":
+			{
+				"buffer_size": 1139,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rangesum1.cpp",
+			"settings":
+			{
+				"buffer_size": 1392,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tbattle.cpp",
+			"settings":
+			{
+				"buffer_size": 1061,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spikes1.cpp",
+			"settings":
+			{
+				"buffer_size": 1710,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spikes2.cpp",
+			"settings":
+			{
+				"buffer_size": 837,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <bits/stdc++.h>\nusing namespace std;\n#define MX 1001\ndouble nw[MX][MX];\nint main()\n{\n	int t;\n	scanf(\"%d\",&t);\n	while(t--)\n	{\n		int n,k;\n		scanf(\"%d %d\",&n,&k);\n		if(n>=MX || k>=MX)\n			\n	}\n	return 0;\n}",
+			"file": "ae2a.cpp",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 209,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "equipass.cpp",
+			"settings":
+			{
+				"buffer_size": 1094,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "equipass1.cpp",
+			"settings":
+			{
+				"buffer_size": 1114,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <bits/stdc++.h>\nusing namespace std;\nmap<string,int> mp[6];\nvoid chk_rem(string c,int *vis,int d,\n	int k,int l,string r)\n{\n	if(k==l)\n	{\n		map<string,int>::iterator it;\n		it=mp[l].find(r);\n		if(it!=mp[l].end())\n		{\n			int j=it->second;\n			// cout<<\"j = \"<<j<<\",\";\n			vis[j]=1;\n			mp[l].erase(it);\n		}\n	}\n	else\n	{\n		char a=c[k];\n		if(a+d<='9')\n		{\n			a=a+d;\n			// cout<<\" a+d:\"<<r+a<<\" \";\n			chk_rem(c,vis,d,k+1,l,r+a);\n			a=a-d;\n		}\n		if(a-d>='0')\n		{\n			a=a-d;\n			// cout<<\" a-d:\"<<r+a<<\" \";\n			chk_rem(c,vis,d,k+1,l,r+a);\n			a=a+d;\n		}\n\n	}\n\n}\n\nint main()\n{\n	int t,ti;\n	scanf(\"%d\",&t);\n	for(ti=1;ti<=t;ti++)\n	{\n		int n,i,l,j;\n		scanf(\"%d\",&n);\n		for(i=0;i<6;i++)\n			mp[i].clear();\n		string c[n];\n		int vis[n];\n		for(i=0;i<n;i++)\n		{\n			vis[i]=0;\n			string tp;\n			cin>>tp;\n			l=tp.length();\n			mp[l][tp]=i;\n			c[i]=tp;\n		}\n		int ans=0;\n		for(i=0;i<n;i++)\n		{\n			if(vis[i]==0)\n			{\n				ans++;\n				l=c[i].length();\n				map<string,int>::iterator it;\n				it=mp[l].find(c[i]);\n				mp[l].erase(it);\n				for(j=1;j<=9;j++)\n				chk_rem(c[i],vis,j,0,l,\"\");\n			}\n		}\n		printf(\"Case %d: %d\\n\",ti, ans);\n	}\n	return 0;\n}",
+			"file": "equipass2.cpp",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 1114,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "equipass.py",
+			"settings":
+			{
+				"buffer_size": 459,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "factcg3.cpp",
+			"settings":
+			{
+				"buffer_size": 736,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "invcnt.cpp",
+			"settings":
+			{
+				"buffer_size": 2419,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cshowb.cpp",
+			"settings":
+			{
+				"buffer_size": 874,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "fibfunch.cpp",
+			"settings":
+			{
+				"buffer_size": 655,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec_set1.py",
+			"settings":
+			{
+				"buffer_size": 317,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <bits/stdc++.h>\nusing namespace std;\nint main()\n{\n	int t;\n	scanf(\"%d\",&t);\n	while(t--)\n	{\n		int n,k;\n		scanf(\"%d%d\",&n,&k);\n		if(k==1 || k==n)\n		{\n			printf(\"%d\\n\",n-1);\n		}\n		else if(k>n)\n			printf(\"%d\\n\", n);\n		else\n		{\n			long long a=k*k,b=k,p=k-2,i=2,ans=k-1,j,c;\n			while(a<=n)\n			{\n				p=a-b-1-p;//cout<<p<<endl;\n				ans+=p;\n				if (i%2==0)\n					ans+=1;\n				b=a;\n				a=a*k;\n				i++;\n			}\n			for (i=b+1;i<=n;i++)\n			{\n				c=0;\n				j=i;\n				while(j%k==0)\n				{\n					j=j/k;\n					c++;\n				}\n				if(c%2==0)\n					ans+=1;\n			}\n			printf(\"%lld\\n\", ans);\n		}\n	}\n	return 0;\n}\n",
+			"file": "spec_set.cpp",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 581,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tll2371.cpp",
+			"settings":
+			{
+				"buffer_size": 955,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tll2372.cpp",
+			"settings":
+			{
+				"buffer_size": 532,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/raj007/.bash_history",
+			"settings":
+			{
+				"buffer_size": 29177,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "codchess.cpp",
+			"settings":
+			{
+				"buffer_size": 194,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "division.cpp",
+			"settings":
+			{
+				"buffer_size": 462,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qtgift1.cpp",
+			"settings":
+			{
+				"buffer_size": 415,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qtgift11.cpp",
+			"settings":
+			{
+				"buffer_size": 350,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qtgift12.cpp",
+			"settings":
+			{
+				"buffer_size": 361,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "maxsumsq.cpp",
+			"settings":
+			{
+				"buffer_size": 393,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hxh.cpp",
+			"settings":
+			{
+				"buffer_size": 989,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "treegame.cpp",
+			"settings":
+			{
+				"buffer_size": 333,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "weight.cpp",
+			"settings":
+			{
+				"buffer_size": 288,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ec_divs.cpp",
+			"settings":
+			{
+				"buffer_size": 1667,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ec_esta.cpp",
+			"settings":
+			{
+				"buffer_size": 921,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ec_esta1.cpp",
+			"settings":
+			{
+				"buffer_size": 1231,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gcj1c09c.cpp",
+			"settings":
+			{
+				"buffer_size": 567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "squarev.py",
+			"settings":
+			{
+				"buffer_size": 185,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "squarev1.py",
+			"settings":
+			{
+				"buffer_size": 666,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "carrhim.cpp",
+			"settings":
+			{
+				"buffer_size": 918,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "anil_pro.cpp",
+			"settings":
+			{
+				"buffer_size": 1850,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "frequent.cpp",
+			"settings":
+			{
+				"buffer_size": 1875,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cdc12_b.cpp",
+			"settings":
+			{
+				"buffer_size": 852,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cdc12_b1.cpp",
+			"settings":
+			{
+				"buffer_size": 887,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cdc12_b2.cpp",
+			"settings":
+			{
+				"buffer_size": 919,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "nclne.cpp",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kngcheck.cpp",
+			"settings":
+			{
+				"buffer_size": 1463,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "edist.cpp",
+			"settings":
+			{
+				"buffer_size": 590,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "edist1.cpp",
+			"settings":
+			{
+				"buffer_size": 974,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "iitkwpc2.cpp",
+			"settings":
+			{
+				"buffer_size": 780,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "qtgift1.py",
+			"settings":
+			{
+				"buffer_size": 255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "msb.cpp",
+			"settings":
+			{
+				"buffer_size": 616,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gnyr04c.cpp",
+			"settings":
+			{
+				"buffer_size": 610,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <bits/stdc++.h>\nusing namespace std;\nint n,m,cnt,mz[2009][11];\nint func(int a,int i)\n{\n	if(i==n)\n		return 1;\n	else if (mz[a][i]!=-1)\n		return mz[a][i];\n	else\n	{\n		int b=a;\n		a=2*a;\n		int ans=0;\n		while(a<=m)\n		{\n			ans+=func(a,i+1);\n			a++;\n		}\n		return mz[b][i]=ans;\n	}\n}\nint main()\n{\n	int t,ti,i;\n	scanf(\"%d\",&t);\n	n=10;m=2001;\n	memset(mz,-1,sizeof(mz));\n	func(1,1);\n	for(ti=1;ti<10;ti++)\n	{\n		for(i=1;i<10;i++)\n			cout<<mz[ti][i]<<\" \";\n		cout<<endl;\n	}\n	for(ti=1;ti<=t;ti++)\n	{\n		scanf(\"%d%d\",&n,&m);\n		printf(\"Data set %d: %d %d %d\\n\",ti,n,m,mz[m][n]);\n	}\n	return 0;\n}",
+			"settings":
+			{
+				"buffer_size": 581,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gnyr04c1.cpp",
+			"settings":
+			{
+				"buffer_size": 449,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <bits/stdc++.h>\nusing namespace std;\nint main()\n{\n	int t;\n	scanf(\"%d\",&t);\n	while(t--)\n	{\n		long long a;\n		int n,k,ans,cnt=0;\n		scanf(\"%d%d\",&n,&k);\n		if(k==1)\n			printf(\"0\\n\");\n		else if(k==n)\n		{\n			printf(\"%d\\n\",n-1);\n		}\n		else if(k>n)\n			printf(\"%d\\n\", n);\n		else\n		{\n			a=1;\n			ans=n/k;\n			while(a<=n/(k*k))\n			{\n				a=a*k*k;\n				cnt++;\n			}\n			ans=ans-cnt;\n			printf(\"%d\\n\", n-ans);\n		}\n	}\n	return 0;\n}",
+			"file": "spec_set4.cpp",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 418,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <bits/stdc++.h>\nusing namespace std;\nint main()\n{\n	int t;\n	scanf(\"%d\",&t);\n	while(t--)\n	{\n		int n,k;\n		scanf(\"%d%d\",&n,&k);\n		if(k==1)\n			printf(\"0\\n\");\n		else if(k==n)\n		{\n			printf(\"%d\\n\",n-1);\n		}\n		else if(k>n)\n			printf(\"%d\\n\", n);\n		else\n		{\n			long long a=k*k-1;\n			int b=k,j,c,ans=k-1,p=k-1,i,cnt=1,d=k,ans1=0;\n			while(a<=n)\n			{\n				p=a-b+1-p;//cout<<p<<endl;\n				ans+=p;\n				b=a+1;\n				a=b*k-1;\n				cnt++;\n			}cout<<\"b= \"<<b<<\" a= \"<<a<<\" ans= \"<<ans<<endl;\n			ans=ans+ans/2;\n			// if(cnt%2==0)\n			// 	ans+=1;\n			// a=k*k;\n			// c=(n-b)/a;\n			// while(c!=0)\n			// {\n			// 	ans1+=c;\n			// 	a=a*k*k;\n			// 	c=(n-b)/a;\n			// 	cout<<\"c = \"<<c<<\", a=\"<<a<<\"  ans1=\"<<ans1<<\" \";\n			// }\n			// ans+=k*ans1;\n			// for (i=b;i<=n;i+=k)\n			// {\n			// 	c=0;\n			// 	j=i;\n			// 	// cout<<\"j=\"<<j<<\", \";\n			// 	while(j%k==0)\n			// 	{\n			// 		j=j/k;\n			// 		c++;\n			// 	}\n			// 	// cout<<\"c= \"<<c<<\", \";\n			// 	if(c%2==0)\n			// 	{\n			// 		ans+=1;\n			// 	}\n			// 	if(i+k<=n)\n			// 	ans+=k-1;\n			// 	else\n			// 		ans+=n-i;\n			// }\n\n			printf(\"%d\\n\", ans);\n		}\n\n	}\n	return 0;\n}\n",
+			"file": "spec_set3.cpp",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 1079,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "findprm.cpp",
+			"settings":
+			{
+				"buffer_size": 464,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "revfib1.py",
+			"settings":
+			{
+				"buffer_size": 590,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cloppair.cpp",
+			"settings":
+			{
+				"buffer_size": 1869,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cloppair2.cpp",
+			"settings":
+			{
+				"buffer_size": 1785,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cloppair1.cpp",
+			"settings":
+			{
+				"buffer_size": 1623,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <bits/stdc++.h>\nusing namespace std;\n#define MAX 150000000\ntypedef long long ll;\nint a[MAX],sb[MAX],nsbit[MAX],nbbit[MAX];\nvector<int> prime;\nvoid setbits()\n{\n	for(int i=2;i<MAX;i++)\n		sb[i]=1+sb[i&(i-1)];\n}\nint ciel()\n{\n	// int l=0,r=MAX,mid=(l+r)/2;\n	// while(l<r)\n	// {\n	// 	if(sb[])\n	// }\n}\nint cnt1()\n{\n\n}\nvoid gen()\n{\n	int i,j,k,l=2;\n	prime.push_back(2);\n	nsbit[0]=1;\n	nbbit[0]=2;\n	for(i=3;i<=(int)sqrt(MAX);i+=2)\n	{\n		if(a[i]==0)\n		{\n			k=prime.size();\n			nbbit[k]=nbbit[k-1]+l;if(k<20)cout<<nbbit[k]<<\",\";\n			nsbit[k]=nsbit[k-1]+sb[i];\n			prime.push_back(i);\n			for(j=i*i;j<MAX;j+=2*i)\n				a[j]=1;	\n		}\n		if(((i+1)&i)==0)\n			l++;\n	}\n	for(;i<MAX;i+=2)\n	{\n		if(a[i]==0)\n		{\n			k=prime.size();\n			nbbit[k]=nbbit[k-1]+l;\n			nsbit[k]=nsbit[k-1]+sb[i];\n			prime.push_back(i);\n		}\n		if((i+1)&i==0)\n			l++;		\n	}\n}\nint main()\n{\n	gen();\n	setbits();\n	int i;\n	cout<<nbbit[prime.size()-1]<<endl;\n	// int t;\n	// scanf(\"%d\",&t);\n	// while(t--)\n	// {\n	// 	int n;\n	// 	scanf(\"%d\",&n);\n	// 	printf(\"%d\\n\", prime[n-1]);\n	// }\n}/**/",
+			"file": "bsprime.cpp",
+			"file_size": 1025,
+			"file_write_time": 130672469563917931,
+			"settings":
+			{
+				"buffer_size": 1029,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bsprime1.cpp",
+			"settings":
+			{
+				"buffer_size": 1014,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "xmen1.cpp",
+			"settings":
+			{
+				"buffer_size": 672,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/raj007/cchef/fastio.cpp",
+			"settings":
+			{
+				"buffer_size": 8496,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 54.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: template <typename ${1:_InputIter}>"
+			],
+			[
+				"gdb",
+				"SublimeGDB: Start Debugging"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/raj007/spoj/gnyr04c.py",
+		"/home/raj007/spoj/op.txt",
+		"/home/raj007/spoj/spec_set2.cpp",
+		"/home/raj007/spoj/spec_set1.",
+		"/home/raj007/spoj/fibsum.py",
+		"/home/raj007/spoj/spec_set1.cpp",
+		"/home/raj007/spoj/spec_set.py",
+		"/home/raj007/spoj/hpprof1.cpp",
+		"/home/raj007/spoj/hpprof.cpp",
+		"/home/raj007/spoj/digokeys.cpp",
+		"/home/raj007/spoj/digokeys1.cpp",
+		"/home/raj007/spoj/dgame.py",
+		"/home/raj007/spoj/dgame.cpp",
+		"/home/raj007/spoj/testse2.cpp",
+		"/home/raj007/spoj/testse1.cpp",
+		"/home/raj007/spoj/spec_set",
+		"/home/raj007/spoj/frequent.cpp",
+		"/home/raj007/spoj/sumpro.py",
+		"/home/raj007/spoj/testsumpro.py",
+		"/home/raj007/spoj/sumpro1.py",
+		"/home/raj007/spoj/sumpro.cpp",
+		"/home/raj007/.config/sublime-text-3/Packages/User/mytemp.sublime-snippet",
+		"/home/raj007/spoj/test1.cpp",
+		"/home/raj007/spoj/adfruits.cpp",
+		"/home/raj007/spoj/dcd.cpp",
+		"/home/raj007/spoj/morena1.cpp",
+		"/home/raj007/spoj/morena.c",
+		"/home/raj007/spoj/morena.cpp",
+		"/home/raj007/spoj/trvcost1.cpp",
+		"/home/raj007/spoj/trvcost.cpp",
+		"/home/raj007/spoj/spikes.cpp",
+		"/home/raj007/spoj/farida.cpp",
+		"/home/raj007/spoj/farida1.cpp",
+		"/home/raj007/spoj/nakanj2.cpp",
+		"/home/raj007/spoj/cchess.cpp",
+		"/home/raj007/spoj/cchess1.cpp",
+		"/home/raj007/spoj/nakanj1.cpp",
+		"/home/raj007/spoj/nakanj.cpp",
+		"/home/raj007/spoj/nakanj",
+		"/home/raj007/spoj/xmax.py",
+		"/home/raj007/spoj/minheap.cpp",
+		"/home/raj007/spoj/tll237.cpp",
+		"/home/raj007/spoj/heap.cpp",
+		"/home/raj007/spoj/tiptop.cpp",
+		"/home/raj007/spoj/gcd.cpp",
+		"/home/raj007/.bash_history",
+		"/home/raj007/spoj/randg.cpp",
+		"/home/raj007/spoj/pforloop.cpp",
+		"/home/raj007/spoj/test.cpp",
+		"/home/raj007/spoj/ou7.cpp",
+		"/home/raj007/spoj/lexstr.cpp",
+		"/home/raj007/spoj/union_find/iitkwpci3.cpp",
+		"/home/raj007/spoj/ufind.cpp",
+		"/home/raj007/spoj/nittroad.cpp",
+		"/home/raj007/spoj/snggw.py",
+		"/home/raj007/spoj/dtrap.cpp",
+		"/home/raj007/spoj/iitkwpci3.cpp",
+		"/home/raj007/spoj/nhay.cpp",
+		"/home/raj007/spoj/nhay_kmp.cpp",
+		"/home/raj007/codeforces/pangram.py",
+		"/home/raj007/spoj/mcur98.cpp",
+		"/home/raj007/spoj/lovingpw.py",
+		"/home/raj007/spoj/lovingpw1.py",
+		"/home/raj007/spoj/lovingpw2.py",
+		"/home/raj007/spoj/maxset.cpp",
+		"/home/raj007/spoj/maxset1.cpp",
+		"/home/raj007/spoj/maxset",
+		"/home/raj007/spoj/xmax.cpp",
+		"/home/raj007/spoj/xmax1.cpp",
+		"/home/raj007/spoj/bat3.cpp",
+		"/home/raj007/spoj/absp1.cpp",
+		"/home/raj007/spoj/maxgrith.py",
+		"/home/raj007/spoj/akvqld03.cpp",
+		"/home/raj007/spoj/squarev1.cpp",
+		"/home/raj007/pixel.py",
+		"/home/raj007/spoj/genprime.cpp",
+		"/home/raj007/spoj/maxgrith.cpp",
+		"/home/raj007/spoj/python",
+		"/home/raj007/spoj/iitkwpcf.cpp",
+		"/home/raj007/spoj/iitkwpc1.cpp",
+		"/home/raj007/spoj/iitkwpc2.cpp",
+		"/home/raj007/spoj/prime1.cpp",
+		"/home/raj007/spoj/goodd.cpp",
+		"/home/raj007/spoj/goodness.cpp",
+		"/home/raj007/spoj/volntee.cpp",
+		"/home/raj007/spoj/ways2.c",
+		"/home/raj007/spoj/eqcheck.cpp",
+		"/home/raj007/spoj/eqcheck.c",
+		"/home/raj007/spoj/ways.c",
+		"/home/raj007/spoj/hxh.xpp",
+		"/home/raj007/spoj/qtgift1.cpy",
+		"/home/raj007/spoj/dsweets.cpp",
+		"/home/raj007/spoj/segmentree.cpp",
+		"/home/raj007/spoj/msb.cpp",
+		"/home/raj007/spoj/spec_set1.py",
+		"/home/raj007/spoj/clock2.py",
+		"/home/raj007/spoj/prime12.cpp",
+		"/home/raj007/spoj/prime1.c",
+		"/home/raj007/spoj/tdkprime.cpp",
+		"/home/raj007/spoj/subsn.py",
+		"/home/raj007/spoj/revfib.py",
+		"/home/raj007/spoj/bomb2.py",
+		"/home/raj007/spoj/good1.cpp",
+		"/home/raj007/spoj/imbusy.cpp",
+		"/home/raj007/spoj/ranjan02.py",
+		"/home/raj007/hackerank/pe67.cpp",
+		"/home/raj007/spoj/dominst.py",
+		"/home/raj007/spoj/dominst2.cpp",
+		"/home/raj007/spoj/dominst1.cpp",
+		"/home/raj007/spoj/dominst.cpp",
+		"/home/raj007/spoj/xmen1.cpp",
+		"/home/raj007/spoj/findprm.cpp",
+		"/home/raj007/spoj/numplay1.py",
+		"/home/raj007/spoj/numplay.py",
+		"/home/raj007/spoj/minnum.cpp",
+		"/home/raj007/spoj/sarr.cpp",
+		"/home/raj007/spoj/pesada01.c",
+		"/home/raj007/spoj/knapsack.py",
+		"/home/raj007/spoj/knapsackdp.py",
+		"/home/raj007/spoj/knapsackdp.cpp",
+		"/home/raj007/spoj/kusac.py",
+		"/home/raj007/kusac.py",
+		"/home/raj007/spoj/factcg2.cpp",
+		"/home/raj007/spoj/factcg3.cpp",
+		"/home/raj007/spoj/sufeqpre1.cpp",
+		"/home/raj007/spoj/sufeqpre.py",
+		"/home/raj007/spoj/sufeqpre.cpp",
+		"/home/raj007/spoj/sufeqpre3.cpp"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"2 4 6 10 14 20 26 36",
+			"1 2 4 6 10 14 20 26 36 46 60 74 94 114 140 166 201 236 280 ",
+			"1 2 4 6 10 14 20 26 36 46 60 74 94 114 140 166 201 236 280 324 380 436 504 572 656 740 840 940 1060 1180 1320 1460 1625 1790 1980 2170 2390 2610",
+			"1 2 4 6 10 14 20 26 36 46 60 74 94 114 140 166 201 236 280 324 380 436 504 572 656 740 840 940 1060 1180 1320 1460 1625 1790 1980 2170 2390 2610 2860 3110 3396 3682 4004 4326 4690 5054 5460 5866 6321 6776 7280 7784 8344 8904 9520 10136 10816 11496 12240 12984 13800 14616 15504 16392 17361 18330 19380 20430 21570 22710 23940 25170 26500 27830 29260 30690 32230 33770 35420 37070 38841 40612 42504 44396 46420 48444 50600 52756 55056 57356 59800 62244 64844 67444 70200 72956 75881 78806 81900 84994 88270 91546 95004 98462 102116 105770 109620 113470 117530 121590 125860 130130 134625 139120 143840 148560 153520 158480 163680 168880 174336 179792 185504 191216 197200 203184 209440 215696 222241 228786 235620 242454 249594 256734 264180 271626 279396 287166 295260 303354 311790 320226 329004 337782 346921 356060 365560 375060 384940 394820 405080 415340 426000 436660 447720 458780 470260 481740 493640 505540 517881 530222 543004 555786 569030 582274 595980 609686 623876 638066 652740 667414 682594 697774 713460 729146 745361 761576 778320 795064 812360 829656 847504 865352 883776 902200 921200 940200 959800 979400 999600 1019800 1040625 1061450 1082900 1104350 1126450 1148550 1171300 1194050 1217476 1240902 1265004 1289106 1313910 1338714 1364220 1389726 1415961 1442196 1469160 1496124 1523844 1551564 1580040 1608516 1637776 1667036 1697080 1727124 1757980 1788836 1820504 1852172 1884681 1917190 1950540 1983890 2018110 2052330 2087420 2122510 2158500 2194490 2231380 2268270 2306090 2343910 2382660 2421410 2461121 2500832 2541504 2582176 2623840 2665504 2708160 2750816 2794496 2838176 2882880 2927584 2973344 3019104 3065920 3112736 3160641 3208546 3257540 3306534 3356650 3406766 3458004 3509242 3561636 3614030 3667580 3721130 3775870 3830610 3886540 3942470 3999625 4056780 4115160 4173540 4233180 4292820 4353720 4414620 4476816 4539012 4602504 4665996 4730820 4795644 4861800 4927956 4995481 5063006 5131900 5200794 5271094 5341394 5413100 5484806 5557956 5631106 5705700 5780294 5856370 5932446 6010004 6087562 6166641 6245720 6326320 6406920 6489080 6571240 6654960 6738680 6824000 6909320 6996240 7083160 7171720 7260280 7350480 7440680 7532561 7624442 7718004 7811566 7906850 8002134 8099140 8196146 8294916 8393686 8494220 8594754 8697094 8799434 8903580 9007726 9113721 9219716 9327560 9435404 9545140",
+			"d",
+			"a",
+			"i",
+			"7",
+			"r",
+			"((ll)l.top()+r.top())",
+			"(ll)l.top()+r.top()",
+			"float",
+			"double",
+			"(ll)",
+			"size",
+			"(ll)y*y",
+			"2*i",
+			"fn(h+2)-fn(l+2)",
+			"1000009",
+			"ans",
+			"sm",
+			"j",
+			"i",
+			"a",
+			"109",
+			"1001",
+			"make_pair",
+			"i",
+			"]",
+			"i",
+			"m",
+			"100009",
+			"n",
+			"c[i].length()",
+			"0",
+			",",
+			"8",
+			"1",
+			"8",
+			"(",
+			")",
+			"-1",
+			"i",
+			"sp+1",
+			",",
+			"n",
+			"ts",
+			"aerospike",
+			"ins",
+			"h",
+			"comp",
+			"<",
+			"mod",
+			"ll",
+			"43",
+			"x",
+			"sk",
+			"si",
+			"a",
+			"t",
+			"ts",
+			"sj",
+			"nj",
+			"ni",
+			"ni,nj,",
+			"ti,tj,",
+			"nj",
+			"ni",
+			"asiz",
+			"arsiz",
+			"r",
+			"aerospike",
+			"distance",
+			"close",
+			"color2",
+			"first",
+			"d",
+			"int",
+			"union",
+			"i",
+			"root",
+			"tree",
+			"e",
+			"t",
+			"lld",
+			"k",
+			"101",
+			"    ",
+			"ar",
+			"pair<char*,int>",
+			"invert",
+			"is %d.",
+			"=",
+			"[y]+",
+			"[3]={}",
+			"i",
+			"st",
+			"int",
+			"mcst",
+			"mgets",
+			"map",
+			"a",
+			"ll",
+			"    ",
+			"        ",
+			"\n",
+			"	",
+			"dp",
+			"n+9",
+			"break",
+			"n+9",
+			"i",
+			"</p><p>",
+			"<br>",
+			"ull",
+			"h.print();",
+			"ll",
+			"int",
+			"    ",
+			"        ",
+			"    ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"        ",
+			"       "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 52,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "vpl2bc.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1574,
+								1574
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sub_prob.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2352,
+								2352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "que1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								918,
+								918
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 514.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "rangesum.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1139,
+								1139
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "rangesum1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "tbattle.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1061,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								797,
+								797
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 306.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "spikes1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1710,
+								1710
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "spikes2.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 837,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								837,
+								837
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "ae2a.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "equipass.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								661,
+								661
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "equipass1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1114,
+								1114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "equipass2.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1114,
+								1114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 656.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "equipass.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								459,
+								459
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "factcg3.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								736,
+								736
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "invcnt.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1465.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "cshowb.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								430,
+								430
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "fibfunch.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								655
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "spec_set1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 317,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "spec_set.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 581,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								515,
+								515
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "tll2371.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								475,
+								475
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 38,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "tll2372.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 532,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								477,
+								477
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 36,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "/home/raj007/.bash_history",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 11256.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 39,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "codchess.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 194,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								194,
+								194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 37,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "division.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 462,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								462,
+								462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 61,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "qtgift1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								415,
+								415
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 60,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "qtgift11.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 350,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								350,
+								350
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 59,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "qtgift12.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								361,
+								361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 58,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "maxsumsq.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								198,
+								198
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 57,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "hxh.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								989,
+								989
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 56,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "treegame.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 55,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "weight.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 54,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "ec_divs.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1508,
+								1508
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1581.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "ec_esta.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 921,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								921,
+								921
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "ec_esta1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								718,
+								718
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "gcj1c09c.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								567,
+								567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": "squarev.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 185,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								185,
+								185
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 49,
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "squarev1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 163.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 48,
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "carrhim.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								918,
+								918
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"file": "anil_pro.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1850,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								881,
+								881
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 39,
+					"file": "frequent.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1875,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 102.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 40,
+					"file": "cdc12_b.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								852,
+								852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 44,
+					"type": "text"
+				},
+				{
+					"buffer": 41,
+					"file": "cdc12_b1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 887,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								887,
+								887
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 43,
+					"type": "text"
+				},
+				{
+					"buffer": 42,
+					"file": "cdc12_b2.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 919,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								553,
+								553
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 35,
+					"type": "text"
+				},
+				{
+					"buffer": 43,
+					"file": "nclne.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								206,
+								206
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 41,
+					"type": "text"
+				},
+				{
+					"buffer": 44,
+					"file": "kngcheck.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1463,
+								1463
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 45,
+					"file": "edist.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 34,
+					"type": "text"
+				},
+				{
+					"buffer": 46,
+					"file": "edist1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								974,
+								974
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 33,
+					"type": "text"
+				},
+				{
+					"buffer": 47,
+					"file": "iitkwpc2.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 780,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								780,
+								780
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 53,
+					"type": "text"
+				},
+				{
+					"buffer": 48,
+					"file": "qtgift1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 42,
+					"type": "text"
+				},
+				{
+					"buffer": 49,
+					"file": "msb.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								208,
+								208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 50,
+					"file": "gnyr04c.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 610,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 306.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 51,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 581,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								581,
+								581
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 55.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 52,
+					"file": "gnyr04c1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								231,
+								231
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 53,
+					"file": "spec_set4.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 54,
+					"file": "spec_set3.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1079,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								495,
+								495
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 55,
+					"file": "findprm.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46,
+								46
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 47,
+					"type": "text"
+				},
+				{
+					"buffer": 56,
+					"file": "revfib1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 40,
+					"type": "text"
+				},
+				{
+					"buffer": 57,
+					"file": "cloppair.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1869,
+								1869
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 46,
+					"type": "text"
+				},
+				{
+					"buffer": 58,
+					"file": "cloppair2.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								203,
+								203
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 52,
+					"type": "text"
+				},
+				{
+					"buffer": 59,
+					"file": "cloppair1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1623,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1623,
+								1623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1149.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 50,
+					"type": "text"
+				},
+				{
+					"buffer": 60,
+					"file": "bsprime.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								575,
+								575
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 51,
+					"type": "text"
+				},
+				{
+					"buffer": 61,
+					"file": "bsprime1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								825,
+								825
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 357.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 62,
+					"type": "text"
+				},
+				{
+					"buffer": 62,
+					"file": "xmen1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 672,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 63,
+					"type": "text"
+				},
+				{
+					"buffer": 63,
+					"file": "/home/raj007/cchef/fastio.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8460,
+								8460
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 612.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 45,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "testgdb.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"spec",
+				"~/spoj/spec_set3.cpp"
+			],
+			[
+				"carr",
+				"~/spoj/carrhim.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
